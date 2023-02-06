@@ -1,7 +1,7 @@
 .banner{
     width: 100%;
     max-width: 1240px;
-    min-width: 335px;
+    min-width: 200px;
     height: 223px;
     margin: auto;
     margin-top: 63px;
@@ -40,10 +40,12 @@
 @media (max-width: 768px) { 
 
     .banner{
+
         height: 111px;
         margin-top: 20px;
         margin-bottom: 16px;
         &__image, &__bg{
+            max-width: 100%;
             border-radius: 10px;
         }
         &__text{

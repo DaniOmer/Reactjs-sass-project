@@ -1,6 +1,7 @@
 import './banner.scss'
 import Image from '../../assets/home-banner.jpg'
 
+/* Contient le banner de la homepage */
 const Banner = () => {
     return (
         <section className="banner">

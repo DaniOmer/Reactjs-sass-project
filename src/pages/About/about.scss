@@ -1,0 +1,64 @@
+@import "../../sass/Utils/variables";
+@import "../../sass/Utils/mixins.scss";
+
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    &__banner{
+        & img{
+            width: 100%;
+            max-width: 1240px;
+            height: 223px;
+            border-radius: 25px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+    }
+    &__informations{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+        &__card{
+            width: 100%;
+            max-width: 1023px;
+            min-width: 300px;
+            &__title{
+                @include dropdown-title;
+            }
+            &__info{
+                @include dropdown-info;
+            }
+        } 
+    }
+    & #close {
+        @include dropdown-rotate;
+    }
+    & #open {
+        @include dropdown-show(200px);
+    }
+    
+}
+
+@media (max-width: 425px) { 
+
+    .about{
+        &__informations{
+            gap: 18px;
+            &__card{
+                &__title{
+                    padding: 7px 15px;
+                    font-size: 15px;
+                }
+                &__info{
+                    font-size: 13px;
+                    line-height: 18px;
+                }
+            }
+        }
+    }
+
+}

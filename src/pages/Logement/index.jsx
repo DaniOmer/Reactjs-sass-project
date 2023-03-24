@@ -12,8 +12,6 @@ import Error from '../Error'
 
 function Logement() {
 
-
-
     const loc = useLocation()
     const params = new URLSearchParams(loc.search)
     const logementId = params.get("id")   
@@ -49,7 +47,18 @@ function Logement() {
             </div>
             <div className="product__informations">
                 <Collapse categorie="product" title="Description" content={description} />
-                <Collapse categorie="product" title="Équipements" content={equipments} />
+                <Collapse categorie="product" 
+                    title="Équipements" 
+
+                    content={
+                        <ul>
+                            {equipments.map((equipment, index) =>{
+                            return(
+                                <li key={index}>{ equipment }</li>)}
+                            )}
+                        </ul>
+                    } 
+                />
             </div>
         </main>
     );
